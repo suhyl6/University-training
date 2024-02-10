@@ -1,0 +1,26 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+public class Main {
+        public static void main(String[] args){
+
+
+                Queue<Integer> st = new LinkedList<>();
+                st.add(4);
+                st.offer(5);
+                st.add(6);
+
+                System.out.println("1: " + st);
+                System.out.println("2.1: " + st.peek());
+                System.out.println("2.2: " + st.element());
+                st.poll();
+                System.out.println("3: " + st);
+                st.remove(6);
+                System.out.println("4: " + st);
+                System.out.println("5: " + st.size());
+                System.out.println("6: " + st.contains(4));
+
+
+        }
+}
