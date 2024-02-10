@@ -1,0 +1,150 @@
+
+
+import java.util.Arrays;
+
+
+public class Main {
+   public static void main(String[] args){
+
+
+String string1 = new String();
+String string2 = new String("");
+String string3 = "";
+       System.out.println("string1: "+ string1);
+       System.out.println("string2: "+ string2);
+       System.out.println("string3: "+ string3);
+
+
+       //________________________________________________________
+
+
+       String string4 = new String("Hello world");
+       String string5 = "Hello wolrd";
+
+
+       System.out.println("string4: "+ string4);
+       System.out.println("string5: "+ string5);
+
+
+       //________________________________________________________
+
+
+       String string6 = new String(string5);
+       System.out.println("string6: "+ string6);
+
+
+       String string7 = string5;
+       System.out.println("string7: "+ string7);
+
+
+       //________________________________________________________
+
+
+       char[] array = {'H','e','l','l','o'};
+       String string8 = new String(array);
+       System.out.println("4: "+ string8);
+
+
+       String string9 = "" +array; //or using the Arrays.toString(array) both will print the actual array elements
+       System.out.println("4.2"+ Arrays.toString(array) );//string9
+
+
+       //________________________________________________________
+
+
+       int x = 4;
+       String string = ""+x;
+       System.out.println("6.1: "+ string);
+
+
+       String str = new String(String.valueOf(x));
+       System.out.println("5.2: "+ str);
+
+
+       String str2 = String.valueOf(x);
+       System.out.println("5.3: "+ str2);
+
+
+       //________________________________________________________
+
+
+       String s = "true";
+       Boolean Bo = Boolean.parseBoolean(s);
+       System.out.println("7: "+Bo);
+       //________________________________________________________
+
+
+       String q = "Hello world";
+       System.out.println("8.1: "+ q.startsWith("H"));
+       System.out.println("8.2: "+ q.endsWith("H"));
+       System.out.println("8.3: "+ q.contains("H"));
+
+
+       //________________________________________________________
+
+
+       String str4 = "Hello world";
+       System.out.println("9.1: "+ str4.indexOf("l"));
+       System.out.println("9.1: "+str4.lastIndexOf("l"));
+
+
+       //________________________________________________________
+
+
+       String str5 = "Hello world";
+
+
+       System.out.println("10: "+ str5.substring(1,2));
+
+
+       //________________________________________________________
+
+
+       System.out.println("11: "+ str5.charAt(1));
+       //________________________________________________________
+
+
+       str5.toLowerCase();
+       str5.toUpperCase();
+
+
+       //________________________________________________________
+
+
+       str5.trim();
+
+
+       //________________________________________________________
+
+
+       str5.replace("H","S");
+
+
+       //________________________________________________________
+
+
+       String str8 = "Hello world";
+      
+       System.out.println("Finale: " +str8.substring(0,5).replace("l","5"));
+
+
+String sx = str8.substring(str8.indexOf("l"), str8.indexOf("o"));
+
+
+       sx = sx.replace("l","4");
+
+
+
+
+
+
+
+
+       String me = "0123456";
+       String ss = me.substring(2, 3);
+       me = me.replace(ss, "5");
+       System.out.println(me);
+
+
+
+
