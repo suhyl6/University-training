@@ -1,0 +1,49 @@
+
+
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+
+
+
+public class Main {
+    public static void main(String[] args){
+
+
+        Deque<Integer> ss = new ArrayDeque<>();
+        ss.push(4);
+        ss.add(5);
+        ss.push(6);
+
+        ss.addFirst(0);
+        ss.addLast(3);
+
+
+        System.out.println("1: " + ss);
+        System.out.println("2: " + ss.pop());
+        System.out.println("3: " + ss.contains(6));
+        System.out.println("4: " + ss.isEmpty());
+
+        ss.removeLast();
+        System.out.println("5.1: " + ss);
+
+        ss.removeFirst();
+        System.out.println("5.2: " + ss);
+
+        ss.remove(4);
+        System.out.println("5.3: " + ss);
+
+
+        System.out.println("6.1: " + ss.peekFirst());
+        System.out.println("6.2: " + ss.peekLast());
+
+        System.out.println("7: " + ss.size());
+
+
+        
+
+
+
+
+    }
+}
