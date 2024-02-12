@@ -1,0 +1,44 @@
+import java.util.Map;
+import java.util.HashMap;
+
+
+public class Main {
+    public static void main(String[] args){
+
+        Map<String,Integer> ss = new HashMap<>();
+
+        ss.put("John", 5111);
+        ss.put("Stewart", 1235);
+        ss.put("Chad", 2356);
+
+
+        System.out.println("1: " + ss);
+        System.out.println("2: " + ss.get("John"));
+        ss.replace("Stewart",5555);
+        System.out.println("3: " + ss.get("Stewart"));
+
+        ss.remove("Stewart");
+        ss.put("Kate", 5555);
+
+        System.out.println("4: " + ss);
+
+
+        System.out.println("5: " + ss.isEmpty());
+
+        ss.remove("Kate");
+        System.out.println("6: " + ss);
+
+
+        System.out.println("7: " + ss.containsKey("Kate"));
+
+
+        ss.putIfAbsent("Sam", 5111);
+        System.out.println("8: " + ss);
+
+        ss.clear();
+        System.out.println("8: " + ss + "The map is empty.");
+
+    }
+}
+
+
