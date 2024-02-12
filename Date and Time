@@ -1,67 +1,79 @@
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.text.DateFormat;
 
 
 public class Main {
-        public static void main(String[] args) throws  ParseException {
+    public static void main(String[] args) throws ParseException {
 
 
-                //1-The Current full date and time
-                Date Date1 = new Date();
-                System.out.println("1: "+Date1);
+        Date date1 = new Date();
 
 
-                //2-The short current timing "hh:mm:ss”
-                SimpleDateFormat date2 = new SimpleDateFormat("hh:mm:ss");
-                System.out.println("2: " + date2.format(Date1));
+        System.out.println("1: "+ date1);
 
 
-                //3-The short date "dd.MM.yyyy"
-                SimpleDateFormat date3 = new SimpleDateFormat("dd.MM.yyyy");
-                System.out.println("3: " + date3.format(Date1));
+        SimpleDateFormat date2 = new SimpleDateFormat("hh:mm:ss");
+        System.out.println("2: " + date2.format(date1));
 
 
-                //4-A date object from a string of date in format dd.MM.yyy
-                String dateString = "14.06.2005";
-                SimpleDateFormat dateS = new SimpleDateFormat("dd.MM.yyyy");
-                Date date4 = dateS.parse(dateString);
-                System.out.println("4: " +dateS.format(date4));
+        SimpleDateFormat date3 = new SimpleDateFormat("dd:MM:yyyy");
+        System.out.println("3: " + date3.format(date1));
+
+        
+        /*   
+        Params:
+         year – the year minus 1900.
+         month – the month between 0-11. 
+         date – the day of the month between 1-31.
+         hrs – the hours between 0-23. 
+         min – the minutes between 0-59.
+         sec - the seconds between 0-59.
+
+         */
+        Date date41 = new Date(100, 6, 14); 
+        DateFormat date4 = DateFormat.getDateInstance();
+        System.out.println("4: " + date4.format(date41));
 
 
-                //5-A current date of the format 14 Jan,2000 using the getIDateInstance()
-                DateFormat date5 = DateFormat.getDateInstance();
-                System.out.println("5: "+ date5.format(Date1));
+        DateFormat date5 = DateFormat.getDateInstance(DateFormat.SHORT);
+        System.out.println("5.1: " + date5.format(date1));
 
 
-                //6-A current date of the short,long,full,medium formats using getIDateInstance()
-                DateFormat date61 = DateFormat.getDateInstance(DateFormat.SHORT);
-                System.out.println("6 short: "+date61.format(Date1));
-                DateFormat date62 = DateFormat.getDateInstance(DateFormat.LONG);
-                System.out.println("6 long: "+ date62.format(Date1));
-                DateFormat date63 = DateFormat.getDateInstance(DateFormat.FULL);
-                System.out.println("6 Full: "+ date63.format(Date1));
-                DateFormat date64 = DateFormat.getDateInstance(DateFormat.MEDIUM);
-                System.out.println("6 medium: "+date64.format(Date1));
+        DateFormat date6 = DateFormat.getDateInstance(DateFormat.LONG);
+        System.out.println("5.2: " + date6.format(date1));
 
 
-                //7-A current time in the format 8:02:14 a.m. using the getTimeInstance()
-                DateFormat date7 = DateFormat.getTimeInstance();
-                System.out.println("7: "+ date7.format(Date1));
+        DateFormat date7 = DateFormat.getDateInstance(DateFormat.MEDIUM);
+        System.out.println("5.3: " + date7.format(date1));
+
+        DateFormat date21 = DateFormat.getDateInstance(DateFormat.FULL);
+        System.out.println("5.4: " + date21.format(date1));
+
+        DateFormat date8 = DateFormat.getTimeInstance(DateFormat.SHORT);
+        System.out.println("6.1: " + date8.format((date1)));
 
 
-                //8-A current time of the short,long,full,medium formats using getITimeInstance()
-                DateFormat date81 = DateFormat.getTimeInstance(DateFormat.SHORT);
-                System.out.println("8 short: "+date81.format(Date1));
-                DateFormat date82 = DateFormat.getTimeInstance(DateFormat.LONG);
-                System.out.println("8 long: "+ date82.format(Date1));
-                DateFormat date83 = DateFormat.getTimeInstance(DateFormat.FULL);
-                System.out.println("8 Full: "+ date83.format(Date1));
-                DateFormat date84 = DateFormat.getTimeInstance(DateFormat.MEDIUM);
-                System.out.println("8 medium: "+date84.format(Date1));
+        DateFormat date9 = DateFormat.getTimeInstance(DateFormat.LONG);
+        System.out.println("6.2: " + date9.format((date1)));
 
 
+        DateFormat date10 = DateFormat.getTimeInstance(DateFormat.MEDIUM);
+        System.out.println("6.3: " + date10.format((date1)));
 
-        }
+        DateFormat date20 = DateFormat.getTimeInstance(DateFormat.FULL);
+        System.out.println("6.4: " + date20.format((date1)));
+
+        DateFormat date11 = DateFormat.getDateInstance();
+        System.out.println("7: " + date11.format(date1));
+
+
+       String dateString = "11/12/2009";
+        SimpleDateFormat date12 = new SimpleDateFormat("dd/MM/yyyy");
+        Date date13 = date12.parse(dateString);
+        System.out.println("8: "+ date12.format(date13));
+
+
+    }
 }
